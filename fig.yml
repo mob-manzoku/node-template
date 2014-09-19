@@ -6,8 +6,7 @@ app:
   ports:
     - "1080:1080"
   environment:
-    NODE_ENV: "prod"
-    DOMAIN: "charge.api.prod.cmn.mobcast.io"
+    NODE_ENV: "local"
     AWS_ACCESS_KEY_ID: "hoge"
     AWS_SECRET_ACCESS_KEY: "huga"
     AWS_REGION: "ap-northeast-1"
@@ -21,4 +20,5 @@ db:
   ports:
     - "3306:3306"
   environment:
+    MYSQL_USER: "mob"
     MYSQL_PASS: "secret"
