@@ -1,11 +1,22 @@
 # node.jsプロジェクト
 
-## Amazon DynamoDB
-Amazon DynamoDBとは、完全マネージド型のNoSQLサービスです。
-開発用にDynamoDB Localが容易されており、DynamoDBを使った動作の確認が出来ます。
+## Setup
+DockerとFigが動けばOKですが、Ubuntu 14.04を推奨します。
 
-リポジトリのルートディレクトリで起動コマンドを実行してください。
+```docker
+$ curl -sSL https://get.docker.io/ubuntu/ | sudo sh
 ```
-fig run dynamodb
+
+```fig
+$ sudo apt-get install -y python_setuptools
+$ sudo easy_install pip
+$ sudo pip install fig
 ```
+
+## ローカル環境
+リポジトリのディレクトリに移動し
+```
+fig up -d
+```
+で起動します。
 
