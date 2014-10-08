@@ -1,24 +1,10 @@
-app:
+currency:
   build: .
-  command: node main.js
+  command: pm2 start --name="currency" --no-daemon main.js 
   volumes:
     - ".:/code"
-  ports:
-    - "1080:1080"
   environment:
-    NODE_ENV: "local"
+    NODE_ENV: "sand"
     AWS_ACCESS_KEY_ID: "hoge"
     AWS_SECRET_ACCESS_KEY: "huga"
     AWS_REGION: "ap-northeast-1"
-  links:
-    - db
-
-db:
-  image: tutum/mysql:5.6
-  volumes:
-    - "var/lib/mysql:/var/lib/mysql"
-  ports:
-    - "3306:3306"
-  environment:
-    MYSQL_USER: "mob"
-    MYSQL_PASS: "secret"
