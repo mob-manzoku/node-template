@@ -1,0 +1,8 @@
+otameshi:
+  build: .
+  command: pm2 start --name="otameshi" --no-daemon main.js 
+  environment:
+    NODE_ENV: "sand"
+    AWS_ACCESS_KEY_ID: "hoge"
+    AWS_SECRET_ACCESS_KEY: "huga"
+    AWS_REGION: "ap-northeast-1"
